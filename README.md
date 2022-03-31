@@ -1,4 +1,4 @@
-### Topics of PHP Operator
+### Topics of PHP Operator 
 ## Case Study:
 	    1. Question 01:
             Let’s make a result grade calculator…
