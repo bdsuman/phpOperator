@@ -18,30 +18,6 @@ From this given formula, you will get a mark. Show the Grade message by the mark
 */
 // Functions For Marks Grading
 
-function grade($mark){
-        $grade='';
-
-    // Mark Check Not More than 100 or Not less than 0;
-    if($mark>=0 && $mark<=100){ 
-        if($mark>=80) 
-             $grade="A+"; 
-        else if($mark>=70)
-            $grade="A"; 
-        else if($mark>=60)
-            $grade="A-";
-        else if($mark>=50)
-            $grade="B";
-        else if($mark>=40)
-            $grade="C";
-        else
-            $grade="F";
-    }else{
-        $grade="Marks Input Invalid";  
-    }
-
-        return $grade;
-}
-
 //Lets  Start Rishita Marks Calculate
 $avg=0;
 $subFullMarks=0;
@@ -59,11 +35,32 @@ $subFullMarks=0;
     $subFullMarks+=$SubjectD;
 
 
-$avg= ceil($subFullMarks/4);
+$avg=$subFullMarks/4;
 
-"Full Marks: $subFullMarks, Avarage: $avg";
+echo "Rishita Full Marks: $subFullMarks, Avarage: $avg";
+echo '<br>';
+$mark=$avg;
+$grade='';
 
-echo "Rishita Your Grade : ".grade($avg);
+// Mark Check Not More than 100 or Not less than 0;
+if($mark>=0 && $mark<=100){ 
+    if($mark>=80) 
+         $grade="A+"; 
+    else if($mark>=70)
+        $grade="A"; 
+    else if($mark>=60)
+        $grade="A-";
+    else if($mark>=50)
+        $grade="B";
+    else if($mark>=40)
+        $grade="C";
+    else
+        $grade="F";
+}else{
+    $grade="Marks Input Invalid";  
+}
+
+echo " Your Grade : ".$grade;
 
 echo '<br><br><hr><br>';
 
